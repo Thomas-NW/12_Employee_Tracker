@@ -2,6 +2,7 @@
 
 const mysql = require('mysql');
 const inquirer = require('inquirer');
+const { Table } = require('console-table-printer');
 const util = require('util');
 
 // create the connection information for the sql database
@@ -15,12 +16,17 @@ const connection = mysql.createConnection({
   user: 'root',
 
   // Your password
-  password: 'yourRootPassword',
+  password: 'yourRootPassword',  // I want to implement .env
   database: 'employee_db',
 });
 
 connection.connect();
 connection.query = util.promisify(connection.query);
+
+const validateString = string => {
+  return string !== '' || 'This information is required.';
+};
+
 
 
 // function which prompts the user for what action they should take
@@ -93,6 +99,7 @@ var questDept = [
     type: 'input',
     name: 'departmentName',
     message: "Enter a new department name",
+    validate: validateString,
   },
   {
     type: 'confirm',
@@ -202,7 +209,7 @@ var questEmployee = [
   //   // type: 'list',
     type: 'checkbox', //In previous work i applied a check box, which worked well too. Not sure what the benefits of the one over the other are.
     message: 'Select a department',
-    choices: connection.query('SELECT id, dept_name FROM department)
+    choices: connection.query('SELECT id, dept_name FROM department')
 // ['View all departments?', 'View all roles?', 'View all employees?', 'Add a department?', 'Add a role?', 'Add an employee?', 'Update employees?'],
   },
 
