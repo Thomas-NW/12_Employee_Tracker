@@ -16,6 +16,8 @@
 ## Description
 🔍 Creating node.js app interfaces that make it easy for non-developers to view and interact with information stored in databases. 
 
+https://thomas-nw.github.io/12_Employee_Tracker/
+
 ## Badges
 🏆 N/A
 
