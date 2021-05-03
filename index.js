@@ -18,7 +18,7 @@ const connection = mysql.createConnection({
   user: 'root',
 
   // Your password
-  password: 'yourRootPassword',  // I want to implement .env
+  password: 'yourRootPassword',
   database: 'employee_db',
 });
 
