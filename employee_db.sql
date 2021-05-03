@@ -5,28 +5,31 @@ USE employee_db;
 
 CREATE TABLE department(
   id INT NOT NULL AUTO_INCREMENT,
-  dept_name VARCHAR(30) NOT NULL,
+  dept_name VARCHAR(30) NULL,
   PRIMARY KEY (id)
   );
 
 CREATE TABLE role(
-  id INT NOT NULL AUTO_INCREMENT,
+  role_id INT NOT NULL AUTO_INCREMENT,
   title VARCHAR(30) NOT NULL,
   salary INT NOT NULL,
   department_id INT NOT NULL,
   CONSTRAINT fk_department FOREIGN KEY (department_id) REFERENCES department(id) ON DELETE CASCADE,
-  PRIMARY KEY (id)
+  PRIMARY KEY (role_id)
 );
 
 CREATE TABLE employee(
-  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  employee_id INT NOT NULL AUTO_INCREMENT,
   first_name VARCHAR(30) NOT NULL,
   last_name VARCHAR(30) NOT NULL,
   role_id INT NOT NULL,
-  CONSTRAINT fk_role FOREIGN KEY (role_id) REFERENCES role(id) ON DELETE CASCADE,
   manager_id INT,
-  CONSTRAINT fk_manager FOREIGN KEY (manager_id) REFERENCES employee(id) ON DELETE SET NULL
+  PRIMARY KEY (employee_id),
+  CONSTRAINT fk_role FOREIGN KEY (role_id) REFERENCES role(role_id) ON DELETE CASCADE
 );
+
+
+
 
 SELECT * FROM department;
 SELECT * FROM role;

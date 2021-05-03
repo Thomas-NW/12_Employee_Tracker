@@ -1,8 +1,10 @@
 {
   "dependencies": {
     "console-table-printer": "^2.8.2",
+    "express": "^4.17.1",
     "inquirer": "^8.0.0",
     "mysql": "^2.18.1",
+    "nodemon": "^2.0.7",
     "sequelize": "^6.6.2"
   }
 }
