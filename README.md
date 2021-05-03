@@ -54,8 +54,15 @@ mySQL, JavaScript, jQuery, json, ipm package
 ## Github reference 
 https://github.com/Thomas-NW/12_Employee_Tracker.git
 
+Movie Link
+![EmployeeTracker Movie](./video/EmployeeTracker_ May_2_2021_9_00_PM.mp4)
+
+https://drive.google.com/file/d/11xBrXmZtjWFyYUmEK-aHfq03N0JXRZoC/view
+
+
 ## Recognitions
 Thank you to my tutor Philip Cowan; who helped me getting started.
+https://www.databasestar.com/sql-update-from-select/
 
 Thank you for visiting and reviewing the project. 
 ---
