@@ -5,6 +5,8 @@ const inquirer = require('inquirer');
 // const { Table } = require('console-table-printer');  -- did bit apply this package feature
 const util = require('util');
 
+
+
 // create the connection information for the sql database
 const connection = mysql.createConnection({
   host: 'localhost',
